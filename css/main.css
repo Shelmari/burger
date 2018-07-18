@@ -108,6 +108,7 @@ a {
   width: 95%; }
 
 .greeting {
+  background-color: #171717;
   background: url("../img/greeting/bg-greeting.jpg") center center no-repeat;
   background-size: cover;
   display: -webkit-box;
@@ -322,6 +323,7 @@ a {
   text-transform: uppercase; }
 
 .best {
+  background-color: #faf5f1;
   background: url("../img/best/bg-best.jpg") center center no-repeat;
   background-size: cover;
   text-align: center;
@@ -392,6 +394,7 @@ a {
   line-height: 1.5rem; }
 
 .command {
+  background-color: #5b5b5b;
   background: url("../img/command/bg.jpg") center center no-repeat;
   background-size: cover;
   position: relative; }
@@ -654,6 +657,7 @@ a {
   display: none; }
 
 .order {
+  background-color: #191919;
   background: url("../img/delivery/bg-texture.jpg") center center no-repeat;
   background-size: cover;
   display: -webkit-box;
