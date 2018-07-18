@@ -1,0 +1,78 @@
+.menu {
+    background: url("../img/menu/bg-menu.jpg") center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.section-title_white {
+    color: $white;
+}
+
+.menu-title {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.menu__acco {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    ::before{
+        @extend %clearfix;
+    }
+}
+
+.menu__acco-item {
+    height: 100%;
+    float: left;
+    &.active{
+        .menu__acco-text {
+            color: $yellow;
+        }
+    }
+}
+
+.menu__acco-trigger {
+    width: 5rem;
+    display: block;
+    height: 100%;
+    float: left;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.menu__acco-text {
+    color: $white;
+    @include gagalin();
+    font-size: 2.5rem;
+    text-align: center;
+    white-space: nowrap;
+    position: absolute;
+    transform: rotate(-90deg) translateY(-50%);
+    transform-origin: 0 0;
+    left: 50%;
+    top: 100%;
+    margin-top: -1.25rem;
+}
+
+.menu__acco-content {
+    height: 100%;
+    float: left;
+    background: rgba(47,50,52,.93);
+    width: 0;
+    overflow: hidden;
+}
+
+.menu__acco-info {
+    @include ubuntu(300);
+    font-size: .875rem;
+    color: $white;
+    padding: 3.75rem 1.875rem;
+    width: 100%;
+    line-height: 1.8;
+    display: none;
+}

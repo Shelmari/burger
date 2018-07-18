@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: rem(16px);
+    @include laptop {
+        font-size: 14px;
+    }
+    @include tablets {
+        font-size: 13px;
+    }
+    @include phones {
+        font-size: 13px;
+    }
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.42;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @include ubuntu();
+    color: $black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: normal;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    li {
+        list-style: none;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 100%;
+    //min-width: rem(960px);
+    min-height: 100%;
+    overflow: hidden;
+}
+.section {
+    height: 100vh;
+    min-height: rem(650px);
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 58.75rem;
+    width: 95%;
+}

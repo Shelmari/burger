@@ -1,0 +1,196 @@
+.greeting {
+    background: url('../img/greeting/bg-greeting.jpg') center center no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.container__greeting {
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-top: rem(12px);
+}
+
+.logo {
+    display: inline-block;
+    position: relative;
+}
+
+.header__menu {
+    margin-left: auto;
+    padding: rem(15px);
+}
+
+.header__link {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger__menu-link{
+    vertical-align: middle;
+    position: relative;
+    height: rem(22px);
+    align-items: center;
+    margin-left: rem(30px);
+    display: none;
+
+    @include tablets{
+        display: inline-flex;
+    }
+}
+
+.hamburger__menu-link_bars {
+    &, &::before, &::after {
+        background: $white;
+        width: 1.5rem;
+        height: .3125rem;
+        border-radius: .1875rem;
+    }
+    
+    &:before, &:after {
+        content: "";
+        display: block;
+        position: absolute;
+    }
+
+    &:before {
+        top: 0;
+    }
+
+    &:after {
+        bottom: 0;
+    }
+}
+
+.nav__list {
+    display: flex;
+    @include tablets {
+        display: none;
+        text-align: center;
+    }
+}
+
+.nav__item {
+    &:last-child {
+        .nav__link::after {
+            display: none;
+        }
+    }
+}
+
+.nav__link {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    @include ubuntu(medium);
+    font-size: rem(13px);
+    text-transform: uppercase;
+    &::after {
+        content: "";
+        display: block;
+        width: 0.25rem;
+        height: 0.25rem;
+        border-radius: 50%;
+        background: #fff;
+        margin: 0 rem(16px);
+    }
+    &:hover{
+        text-decoration: underline; 
+    }
+}
+
+.greeting__content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15%;
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+.greeting__pic {
+    width: 50%;
+    @include tablets {
+        margin: rem(15px);
+    }
+}
+
+.content__img {
+    display: block;
+    max-width: 100%;
+}
+
+.greeting__text {
+    padding-top: 7.1875rem;
+    color: #fff;
+    width: 50%;
+    @include tablets {
+        text-align: center;
+        width: 100%;
+        padding-top: 0;
+        
+    }
+}
+
+.section-title {
+    @include gagalin();
+    font-size: rem(72px);
+    color: $yellow;
+    margin-bottom: 0.75rem;
+    @include tablets {
+    text-align: center;        
+    }
+}
+
+.greeting__desc {
+    @include lifehack();
+    font-size: rem(65px);
+    line-height: rem(65px);
+}
+
+.humburger__menu {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(47, 50, 52, .99);
+    align-items: center;
+    justify-content: center;
+    transition: opacity .3s;
+}
+
+.hamburger-menu_visible {
+   // display: flex;
+    opacity: 1s;
+    display: none;
+}
+
+.hamburger__menu-logo {
+    position: absolute;
+    top: .752rem;
+    left: 1.2rem;
+}
+.nav__hamburger {
+    width: auto;
+
+    @include tablets {
+        display: block;
+    }
+}
+
+.nav {
+    vertical-align: middle;
+
+    @include tablets {
+        display: block;
+    }
+}

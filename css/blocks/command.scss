@@ -1,0 +1,122 @@
+.command {
+    background: url('../img/command/bg.jpg') center center no-repeat;
+    background-size: cover;
+    position: relative;
+    .section-title {
+        margin-bottom: 7%;
+    }
+}
+
+.command__wrap {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    padding: 5% 2% 0 7%;
+    background: rgba(47,50,52, .93);
+    @include tablets {
+        left: 0;
+    }
+}
+
+.command__accordion-item {
+    margin-bottom: 2.5rem;
+    &.active {
+        .command__accordion-link {
+            color: #f9b43b;
+        }
+        .command__accordion-details {
+            display: block;
+        }
+        .command__accordion-link {
+            &::before {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    @include tablets {
+        text-align: center;
+    }
+}
+
+.command__accordion-link {
+    display: block;
+    color: #fff;
+    @include gagalin();
+    font-size: .875rem;
+    position: relative;
+    margin-bottom: 1.25rem;
+    &::before {                     //треугольник вершина вниз
+        content: "";
+        display: block;
+        position: absolute;
+        left: -1.1875rem;
+        top: .5rem;
+        width: 0;
+        height: 0;
+        border-top: .375rem solid $yellow;
+        border-bottom: 0 solid transparent;
+        border-left: .3125rem solid transparent;
+        border-right: .3125rem solid transparent;
+        transform: rotate(0deg);
+    }
+    @include tablets {
+        font-size: 1.5625rem;
+        display: inline-block
+    }
+}
+
+.command__accordion-details {
+    @extend %clearfix;
+    padding-top: .875rem;
+    display: none;
+}
+
+.accordion-details__photo {
+    float: left;
+    width: 30%;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.accordion-details__img {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat; 
+}
+
+.accordion-details__desc {
+    float: left;
+    font-size: rem(14px);
+    color: #fff;
+    width: 70%;
+}
+
+.accordion-details__photo, .accordion-details__desc {
+    @include tablets {
+        float: none;
+        width: 100%;
+        padding: 0 20%;
+    }
+}
+
+.accordion-details__prof {
+    @include ubuntu(bold);
+    font-size: .875rem;
+    margin-bottom: .875rem;
+    @include tablets {
+        padding-top: 5%;
+    }
+}
+
+.accordion-details__text {
+    @include ubuntu(light);
+}

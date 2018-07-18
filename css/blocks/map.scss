@@ -1,0 +1,47 @@
+.yandex-map {
+    background: url('../img/map/Layer 4.jpg') center center no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer {
+    background: url('../img/map/footer.jpg') center center no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: .625rem 0;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer__col {
+    width: 50%;
+    margin-bottom: .9275rem;
+}
+
+.footer__col_right {
+    text-align: right;
+    margin-bottom: o;
+}
+
+.footer__address {
+    color: $white;
+    font-size: .875rem;
+}
+
+.footer__phone {
+    color: $red;
+    @include ubuntu(700);
+    text-decoration: none;
+    font-size: .875rem;
+}

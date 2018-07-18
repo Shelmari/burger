@@ -1,0 +1,11 @@
+@function rem($px) {
+    @return $px / 16px + 0rem;
+}
+
+%clearfix {
+    &:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
